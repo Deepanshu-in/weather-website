@@ -1,7 +1,19 @@
+// ! function that allow you for the location
+// navigator.geolocation.getCurrentPosition(function(position) {
+//   // get latitude and longitude
+//   let latitude = position.coords.latitude;
+//   let longitude = position.coords.longitude;
+//   console.log(latitude + "lati");
+//   console.log(longitude + "longi");
+// });
+
+
+
+
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("mapid"), {
-    center: { lat: 30.77015849791854, lng: 76.5761085042766 },
+    center: { lat: 30.77015849791854, lng: 76.5761085042766},
     zoom: 6,
   });
 
@@ -99,6 +111,7 @@ function addLayer(frame) {
     map.overlayMapTypes.push(radarLayers[frame.path]);
   }
 }
+
 
 function changeRadarPosition(position, preloadOnly) {
   while (position >= mapFrames.length) {
